@@ -15,6 +15,11 @@ public class ConstellationManager: MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ResetAllLines();
+        }
+
         if (this.selectedStar != null && this.currentLine != null)
         {
             if (Input.GetMouseButtonDown(1))
@@ -86,5 +91,13 @@ public class ConstellationManager: MonoBehaviour
         Destroy(this.currentLine.gameObject);
         this.currentLine = null;
         this.selectedStar = null;
+    }
+
+    private void ResetAllLines()
+    {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
     }
 }
