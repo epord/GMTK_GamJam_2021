@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ConstellationManager: MonoBehaviour
 {
+    // Each constellation is defined by
+    public List<Constellation> constellations;
     public GameObject linePrefab;
     public GameObject contellationPrefab;
     public float constellationMovementXRatio = 1.0f;
@@ -13,7 +15,10 @@ public class ConstellationManager: MonoBehaviour
     
     private Star selectedStar;
     private LineRenderer currentLine;
-    private List<LineRenderer> linesCreated = new List<LineRenderer>();
+    // Each pair of stars represents a line (similar to what is done in 3D models with polygons)
+    private List<Star> linesCreated = new List<Star>();
+
+
 
     void Update()
     {
@@ -100,9 +105,10 @@ public class ConstellationManager: MonoBehaviour
             }
             else
             {
-                ConsolidateLine(star.transform.position);
+                ConsolidateLine(star);
             }
         }
+
     }
 
     private void CreateLine(Vector3 from, Vector3 to)
@@ -118,16 +124,37 @@ public class ConstellationManager: MonoBehaviour
         this.currentLine = lineRenderer;
     }
 
-    private void ConsolidateLine(Vector3 finalPoint)
+    private void ConsolidateLine(Star endStar)
     {
-        this.currentLine.SetPosition(1, finalPoint);
-        this.linesCreated.Add(this.currentLine);
+        this.currentLine.SetPosition(1, endStar.transform.position);
+        this.linesCreated.Add(this.selectedStar);
+        this.linesCreated.Add(endStar);
         this.currentLine = null;
         this.selectedStar = null;
+
+        if (this.IsAnExistingConstellation(out Constellation constellation))
+        {
+            this.CreateConstellation();
+        }
+    }
+
+    private bool IsAnExistingConstellation(out Constellation constellation)
+    {
+        constellation = null;
+        foreach (Constellation c in this.constellations)
+        {
+            if (c.IsSameConstellation(this.linesCreated))
+            {
+                constellation = c;
+                return true;
+            }
+        }
+        return false;
     }
 
     private void ResetLine()
     {
+        this.linesCreated.RemoveAt(this.linesCreated.Count - 1);
         if (this.currentLine != null)
         {
             Destroy(this.currentLine.gameObject);
@@ -143,6 +170,7 @@ public class ConstellationManager: MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+        this.linesCreated.Clear();
     }
 
     private void CreateConstellation()
