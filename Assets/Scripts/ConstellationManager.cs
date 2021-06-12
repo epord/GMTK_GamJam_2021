@@ -114,7 +114,7 @@ public class ConstellationManager: MonoBehaviour
         lineRenderer.startWidth = 0.1f;
         lineRenderer.endWidth = 0.1f;
         lineRenderer.SetPositions(pos.ToArray());
-        lineRenderer.useWorldSpace = true;
+        lineRenderer.useWorldSpace = false;
         this.currentLine = lineRenderer;
     }
 
