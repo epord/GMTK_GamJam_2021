@@ -7,7 +7,10 @@ public class ConstellationManager: MonoBehaviour
 {
     public GameObject linePrefab;
     public GameObject contellationPrefab;
-
+    public float constellationMovementXRatio = 1.0f;
+    public float constellationMovementYRatio = 1.0f;
+    public GameObject starField;
+    
     private Star selectedStar;
     private LineRenderer currentLine;
     private List<LineRenderer> linesCreated = new List<LineRenderer>();
@@ -17,9 +20,21 @@ public class ConstellationManager: MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
         
-        if (selectedStar != null && this.currentLine != null)
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            currentLine.SetPosition(1, mousePos2D);
+            MoveConstellation(0, 1);
+        }
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            MoveConstellation(1, 0);
+        }
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            MoveConstellation(0, -1);
+        }
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            MoveConstellation(-1, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -57,6 +72,16 @@ public class ConstellationManager: MonoBehaviour
                 }
             }
         }
+
+        if (selectedStar != null && this.currentLine != null)
+        {
+            currentLine.SetPosition(1, mousePos2D);
+        }
+    }
+
+    private void MoveConstellation(int x, int y)
+    {
+        starField.transform.position -= new Vector3(constellationMovementXRatio * x, constellationMovementYRatio * y, 0);
     }
 
     private void SelectStar(Star star)
