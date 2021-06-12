@@ -350,6 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linePrefab: {fileID: 2065753432467913637, guid: b42c187981b4ab141b35539e1b1580e4, type: 3}
+  contellationPrefab: {fileID: 8000328729991839780, guid: 832fc97125ad1b441b13dac058cc8dbf, type: 3}
 --- !u!4 &836150039
 Transform:
   m_ObjectHideFlags: 0

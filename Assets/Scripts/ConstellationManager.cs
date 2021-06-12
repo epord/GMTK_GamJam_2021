@@ -5,6 +5,7 @@ using UnityEngine;
 public class ConstellationManager: MonoBehaviour
 {
     public GameObject linePrefab;
+    public GameObject contellationPrefab;
 
     private Star selectedStar;
     private LineRenderer currentLine;
@@ -18,6 +19,11 @@ public class ConstellationManager: MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             ResetAllLines();
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            CreateConstellation();
         }
 
         if (this.selectedStar != null && this.currentLine != null)
@@ -95,9 +101,19 @@ public class ConstellationManager: MonoBehaviour
 
     private void ResetAllLines()
     {
-        foreach (Transform child in transform)
+        foreach (Transform child in this.transform)
         {
             Destroy(child.gameObject);
+        }
+    }
+
+    private void CreateConstellation()
+    {
+        GameObject contellation = Instantiate(contellationPrefab);
+
+        while (this.transform.childCount > 0)
+        {
+            this.transform.GetChild(0).transform.parent = contellation.transform;
         }
     }
 }
