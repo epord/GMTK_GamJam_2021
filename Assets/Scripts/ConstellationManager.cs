@@ -186,5 +186,6 @@ public class ConstellationManager: MonoBehaviour
             lineRenderer.startColor = Color.red;
             lineRenderer.endColor = Color.red;
         }
+        this.linesCreated.Clear();
     }
 }
