@@ -94,13 +94,17 @@ public class ConstellationManager: MonoBehaviour
 
     private void ResetLine()
     {
-        Destroy(this.currentLine.gameObject);
+        if (this.currentLine != null)
+        {
+            Destroy(this.currentLine.gameObject);
+        }
         this.currentLine = null;
         this.selectedStar = null;
     }
 
     private void ResetAllLines()
     {
+        ResetLine();
         foreach (Transform child in this.transform)
         {
             Destroy(child.gameObject);
