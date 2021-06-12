@@ -109,11 +109,16 @@ public class ConstellationManager: MonoBehaviour
 
     private void CreateConstellation()
     {
-        GameObject contellation = Instantiate(contellationPrefab);
+        if (this.transform.childCount == 0) return;
 
+        GameObject constellation = Instantiate(contellationPrefab);
         while (this.transform.childCount > 0)
         {
-            this.transform.GetChild(0).transform.parent = contellation.transform;
+            Transform child = this.transform.GetChild(0);
+            child.transform.parent = constellation.transform;
+            LineRenderer lineRenderer = child.gameObject.GetComponent<LineRenderer>();
+            lineRenderer.startColor = Color.red;
+            lineRenderer.endColor = Color.red;
         }
     }
 }
