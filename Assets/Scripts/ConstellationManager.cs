@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,11 @@ public class ConstellationManager: MonoBehaviour
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+        
+        if (selectedStar != null && this.currentLine != null)
+        {
+            currentLine.SetPosition(1, mousePos2D);
+        }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -25,48 +31,51 @@ public class ConstellationManager: MonoBehaviour
         {
             CreateConstellation();
         }
-
-        if (this.selectedStar != null && this.currentLine != null)
+        
+        if (Input.GetMouseButtonDown(1))
         {
-            if (Input.GetMouseButtonDown(1))
+            if (selectedStar != null && this.currentLine != null)
             {
                 ResetLine();
             }
             else
             {
-                this.currentLine.SetPosition(1, mousePos2D);
+                ResetAllLines();
             }
         }
 
         if (Input.GetMouseButtonDown(0))
         {
-
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
             if (hit.collider != null)
             {
-
                 GameObject collider = hit.collider.gameObject;
                 Star star = collider.GetComponent(typeof(Star)) as Star;
-
                 if (star != null)
                 {
-                    if (this.selectedStar == null)
-                    {
-                        this.selectedStar = star;
-                        this.CreateLine(star.transform.position, mousePos2D);
-                    }
-                    else
-                    {
-                        if (GameObject.Equals(star, selectedStar))
-                        {
-                            ResetLine();
-                        }
-                        else
-                        {
-                            ConsolidateLine(star.transform.position);
-                        }
-                    }
+                    SelectStar(star);
                 }
+            }
+        }
+    }
+
+    private void SelectStar(Star star)
+    {
+        if (star is null) Debug.LogException(new Exception("Passed null as Star"));
+        if (this.selectedStar == null)
+        {
+            this.selectedStar = star;
+            this.CreateLine(star.transform.position, star.transform.position);
+        }
+        else
+        {
+            if (GameObject.Equals(star, selectedStar))
+            {
+                ResetLine();
+            }
+            else
+            {
+                ConsolidateLine(star.transform.position);
             }
         }
     }
