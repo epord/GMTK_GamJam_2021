@@ -17,7 +17,14 @@ public class ConstellationManager: MonoBehaviour
 
         if (this.selectedStar != null && this.currentLine != null)
         {
-            this.currentLine.SetPosition(1, mousePos2D);
+            if (Input.GetMouseButtonDown(1))
+            {
+                ResetLine();
+            }
+            else
+            {
+                this.currentLine.SetPosition(1, mousePos2D);
+            }
         }
 
         if (Input.GetMouseButtonDown(0))
@@ -39,8 +46,14 @@ public class ConstellationManager: MonoBehaviour
                     }
                     else
                     {
-                        ConsolidateLine(star.transform.position);
-                        this.selectedStar = null;
+                        if (GameObject.Equals(star, selectedStar))
+                        {
+                            ResetLine();
+                        }
+                        else
+                        {
+                            ConsolidateLine(star.transform.position);
+                        }
                     }
                 }
             }
@@ -65,6 +78,13 @@ public class ConstellationManager: MonoBehaviour
         this.currentLine.SetPosition(1, finalPoint);
         this.linesCreated.Add(this.currentLine);
         this.currentLine = null;
+        this.selectedStar = null;
+    }
 
+    private void ResetLine()
+    {
+        Destroy(this.currentLine.gameObject);
+        this.currentLine = null;
+        this.selectedStar = null;
     }
 }
