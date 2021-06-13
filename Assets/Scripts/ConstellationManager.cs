@@ -9,21 +9,27 @@ public class ConstellationManager: MonoBehaviour
     public List<Constellation> constellations;
     public GameObject linePrefab;
     public GameObject contellationPrefab;
-    public float constellationMovementXRatio = 1.0f;
-    public float constellationMovementYRatio = 1.0f;
+    public float constellationMovementXRatio = 0.002f;
+    public float constellationMovementYRatio = 0.002f;
+    public float cameraMouseMovementRatio = 1.4f;
     public GameObject starField;
     
     private Star selectedStar;
+    private Star selectedStarOnClick;
     private LineRenderer currentLine;
     // Each pair of stars represents a line (similar to what is done in 3D models with polygons)
     private List<Star> linesCreated = new List<Star>();
 
+    private Vector3? starFieldPositionStart = null;
+    private Vector3? clickedPosition = null;
+    public int counter = 0;
 
 
     void Update()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+        Vector3 mousePosRelative = Camera.main.ScreenToViewportPoint(Input.mousePosition);
         
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
@@ -66,6 +72,11 @@ public class ConstellationManager: MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            // Selected the Sky.
+            starFieldPositionStart = starField.transform.position;
+            float height = 2f * Camera.main.orthographicSize;
+            float width = height * Camera.main.aspect;
+            clickedPosition = new Vector3(mousePosRelative.x * width / 2, mousePosRelative.y * height / 2, 0);
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
             if (hit.collider != null)
             {
@@ -73,11 +84,36 @@ public class ConstellationManager: MonoBehaviour
                 Star star = collider.GetComponent(typeof(Star)) as Star;
                 if (star != null)
                 {
-                    SelectStar(star);
+                    selectedStarOnClick = star;
                 }
             }
         }
 
+        if (Input.GetMouseButtonUp(0))
+        {
+            starFieldPositionStart = null;
+            clickedPosition = null;
+            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+            if (hit.collider != null)
+            {
+                GameObject collider = hit.collider.gameObject;
+                Star star = collider.GetComponent(typeof(Star)) as Star;
+                if (star != null && selectedStarOnClick == star)
+                {
+                    SelectStar(star);
+                }
+            }
+            selectedStarOnClick = null;
+        }
+
+        if (starFieldPositionStart != null && clickedPosition != null)
+        {
+            float height = 2f * Camera.main.orthographicSize;
+            float width = height * Camera.main.aspect;
+            Vector3 positionDifference = new Vector3(mousePosRelative.x * width / 2, mousePosRelative.y * height / 2, 0) - clickedPosition.Value;
+            Vector3 positionDifferenceAdjusted = new Vector3(positionDifference.x * cameraMouseMovementRatio, positionDifference.y * cameraMouseMovementRatio, 0);
+            starField.transform.position = starFieldPositionStart.Value - positionDifferenceAdjusted;
+        }
         if (selectedStar != null && this.currentLine != null)
         {
             currentLine.SetPosition(1, mousePos2D);
@@ -86,7 +122,7 @@ public class ConstellationManager: MonoBehaviour
 
     private void MoveConstellation(int x, int y)
     {
-        starField.transform.position -= new Vector3(constellationMovementXRatio * x, constellationMovementYRatio * y, 0);
+        starField.transform.position += new Vector3(constellationMovementXRatio * x, constellationMovementYRatio * y, 0);
     }
 
     private void SelectStar(Star star)
@@ -120,7 +156,7 @@ public class ConstellationManager: MonoBehaviour
         lineRenderer.startWidth = 0.1f;
         lineRenderer.endWidth = 0.1f;
         lineRenderer.SetPositions(pos.ToArray());
-        lineRenderer.useWorldSpace = false;
+        lineRenderer.useWorldSpace = true;
         this.currentLine = lineRenderer;
     }
 
@@ -154,7 +190,7 @@ public class ConstellationManager: MonoBehaviour
 
     private void ResetLine()
     {
-        this.linesCreated.RemoveAt(this.linesCreated.Count - 1);
+        if (linesCreated.Count > 0) this.linesCreated.RemoveAt(this.linesCreated.Count - 1);
         if (this.currentLine != null)
         {
             Destroy(this.currentLine.gameObject);

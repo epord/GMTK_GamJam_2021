@@ -418,11 +418,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2704cc079371e814d91dc9d5a6b01916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  constellations: []
   linePrefab: {fileID: 2065753432467913637, guid: b42c187981b4ab141b35539e1b1580e4, type: 3}
   contellationPrefab: {fileID: 8000328729991839780, guid: 832fc97125ad1b441b13dac058cc8dbf, type: 3}
   constellationMovementXRatio: 0.002
   constellationMovementYRatio: 0.002
-  starField: {fileID: 161911289}
+  cameraMouseMovementRatio: 1.4
+  starField: {fileID: 519420028}
+  counter: 0
 --- !u!4 &836150039
 Transform:
   m_ObjectHideFlags: 0
