@@ -9,6 +9,7 @@ public class ConstellationManager: MonoBehaviour
     public List<Constellation> constellations;
     public GameObject linePrefab;
     public GameObject contellationPrefab;
+    public ConstellationBubble constellationBubble;
     public float keyboardMovementRatio = 0.002f;
     public float cameraMouseMovementRatio = 1.4f;
     public float cameraDragThreshold = 0.2f;
@@ -315,5 +316,6 @@ public class ConstellationManager: MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         radioText.WriteText(constellation.messages);
         solvedConstellations++;
+        constellationBubble.ConstellationCompleted(constellation.constellationOrder);
     }
 }

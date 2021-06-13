@@ -7,6 +7,7 @@ public class Constellation : MonoBehaviour
     // Each pair of stars represents a line (similar to what is done in 3D models with polygons)
     public List<Star> stars;
     public string[] messages;
+    public int constellationOrder;
 
     private void Start()
     {

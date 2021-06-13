@@ -5,6 +5,7 @@ using UnityEngine;
 public class ConstellationBubble : MonoBehaviour
 {
     public Sprite[] constellations;
+    public Sprite[] constellationsBlue;
     public SpriteRenderer currentConstelationRenderer;
     public GameObject prev;
     public GameObject next;
@@ -39,6 +40,12 @@ public class ConstellationBubble : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void ConstellationCompleted(int constellationNumber)
+    {
+        constellations[constellationNumber] = constellationsBlue[constellationNumber];
+        this.currentConstelationRenderer.sprite = constellations[this.currentConstellationIndex];
     }
 
     void PrevConstellation()

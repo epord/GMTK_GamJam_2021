@@ -535,6 +535,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29184d7407f64084a9ee2f914defa5e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &263684940 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+  m_PrefabInstance: {fileID: 2019507663}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 713fca16c63329546813df977d724b82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &266578867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,13 +1182,14 @@ MonoBehaviour:
   - {fileID: 780186409}
   linePrefab: {fileID: 2065753432467913637, guid: b42c187981b4ab141b35539e1b1580e4, type: 3}
   contellationPrefab: {fileID: 7793604319959165425, guid: 832fc97125ad1b441b13dac058cc8dbf, type: 3}
+  constellationBubble: {fileID: 263684940}
   keyboardMovementRatio: 0.01
   cameraMouseMovementRatio: 1.4
   cameraDragThreshold: 0.05
   cameraBorderLeftX: -30
   cameraBorderRightX: 30
-  cameraBorderTopY: 25
-  cameraBorderBottomY: -25
+  cameraBorderTopY: 20
+  cameraBorderBottomY: -20
   cameraObject: {fileID: 2039570870}
   constellationCreatedClip: {fileID: 8300000, guid: 5f3f4c20a59ea9d4789dd985eb0e853c, type: 3}
   lineCreationClip: {fileID: 8300000, guid: 14f26958c79d7e947a5019189064eb3d, type: 3}
@@ -2512,6 +2524,90 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -4
       objectReference: {fileID: 0}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellations.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9b5484aedee17f44fadb98f50339dfec, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellations.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 81673ea7171fd354592d9de02932166c, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellations.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: e86828dcbb80fb5428315ecd4dee2d18, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellations.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7043d32da5f67384a9c80356589a5543, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellations.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5cbb29497e2b59548bdfbb9d45d6ca43, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellations.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: ef2bb1a6f0c8a484baa67cfc8c9fa0f1, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellations.Array.data[10]
+      value: 
+      objectReference: {fileID: 21300000, guid: 618a224c59cbfbb429d371b3eb0ac280, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellations.Array.data[11]
+      value: 
+      objectReference: {fileID: 21300000, guid: d955ae498805fe643a1e623c2ad647c2, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellationsBlue.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellationsBlue.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 089cdec5a9bec77458cc34fbcef8cbc7, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellationsBlue.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc0cd7f3c54ec7c438e0fa00021ac4e7, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellationsBlue.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: e19f56b4d0db3a14d8b00129ba51f0b2, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellationsBlue.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7128c31bf4b2e874289cc183d6fc1378, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellationsBlue.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 980a249d834458242a2b06763f638ada, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellationsBlue.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2232d29273d89a644832f29a4eea0176, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellationsBlue.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7631c8fb0cec96e45a7f64782c46cda8, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellationsBlue.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 51f1f3c7e6795f64f85d3afe33e8c0cd, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellationsBlue.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: 95d4b33c49121bf46b203d7a0b02750d, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellationsBlue.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ba540fc300206b499d999e9f6e9156b, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellationsBlue.Array.data[10]
+      value: 
+      objectReference: {fileID: 21300000, guid: 723a4ef59eb38a4438cba970bf33ec4d, type: 3}
+    - target: {fileID: 329416328214875476, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: constellationsBlue.Array.data[11]
+      value: 
+      objectReference: {fileID: 21300000, guid: 25aff6212ddabb440802f0db8fb39dcf, type: 3}
     - target: {fileID: 329416328214875477, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2887,6 +2983,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 396475260129094911, guid: 9e7d0a02ce78a4a4c8d395c41c9d1073, type: 3}
+      propertyPath: constellationOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 396475260129094911, guid: 9e7d0a02ce78a4a4c8d395c41c9d1073, type: 3}
       propertyPath: messages.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -2920,6 +3020,10 @@ PrefabInstance:
     - target: {fileID: 1241707127495457288, guid: 7a861c72526144e429b37df3f440a1e4, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241707127495457289, guid: 7a861c72526144e429b37df3f440a1e4, type: 3}
+      propertyPath: constellationOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1241707127495457289, guid: 7a861c72526144e429b37df3f440a1e4, type: 3}
       propertyPath: messages.Array.size
@@ -2996,6 +3100,10 @@ PrefabInstance:
     - target: {fileID: 2356947463022642325, guid: 4eed003a78e978648b2e1314c58486e2, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356947463147412144, guid: 4eed003a78e978648b2e1314c58486e2, type: 3}
+      propertyPath: constellationOrder
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2356947463147412144, guid: 4eed003a78e978648b2e1314c58486e2, type: 3}
       propertyPath: messages.Array.size
@@ -3090,6 +3198,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313278470956635514, guid: d214d78cbc7031f4d9d9444f8b54b05d, type: 3}
+      propertyPath: constellationOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313278470956635514, guid: d214d78cbc7031f4d9d9444f8b54b05d, type: 3}
       propertyPath: messages.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -3162,6 +3274,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 266578868}
     m_Modifications:
+    - target: {fileID: 395618902179764168, guid: a5bc353d96f7a344998b87f1ae4d5f60, type: 3}
+      propertyPath: constellationOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 395618902179764168, guid: a5bc353d96f7a344998b87f1ae4d5f60, type: 3}
       propertyPath: messages.Array.size
       value: 3
@@ -3244,6 +3360,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 266578868}
     m_Modifications:
     - target: {fileID: 4491958674768585484, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
+      propertyPath: constellationOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491958674768585484, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
       propertyPath: messages.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -3274,11 +3394,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4491958674768585487, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.72
+      value: -5.52
       objectReference: {fileID: 0}
     - target: {fileID: 4491958674768585487, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.17
+      value: -8.86
       objectReference: {fileID: 0}
     - target: {fileID: 4491958674768585487, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3286,19 +3406,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4491958674768585487, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7660445
+      value: 0.8660254
       objectReference: {fileID: 0}
     - target: {fileID: 4491958674768585487, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4491958674768585487, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4491958674768585487, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.6427876
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4491958674768585487, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3310,7 +3430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4491958674768585487, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 80
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4491958676220038036, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
       propertyPath: m_Enabled
@@ -3382,6 +3502,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4863188295439578157, guid: 4134a4a88dd2aa34ab09b7e28c3ba80f, type: 3}
+      propertyPath: constellationOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863188295439578157, guid: 4134a4a88dd2aa34ab09b7e28c3ba80f, type: 3}
       propertyPath: messages.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -3420,6 +3544,10 @@ PrefabInstance:
     - target: {fileID: 4895133729301575784, guid: 218ca05c37db96e46bf4dfb3cf6d240f, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895133729301575785, guid: 218ca05c37db96e46bf4dfb3cf6d240f, type: 3}
+      propertyPath: constellationOrder
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4895133729301575785, guid: 218ca05c37db96e46bf4dfb3cf6d240f, type: 3}
       propertyPath: messages.Array.size
@@ -3545,6 +3673,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6375506827285047363, guid: 876846de3879e3049a3f07f500551f3e, type: 3}
+      propertyPath: constellationOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375506827285047363, guid: 876846de3879e3049a3f07f500551f3e, type: 3}
       propertyPath: messages.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -3628,6 +3760,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7018215713744302525, guid: 47eda0ed28f8b48408cddeaf2064822b, type: 3}
+      propertyPath: constellationOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7018215713744302525, guid: 47eda0ed28f8b48408cddeaf2064822b, type: 3}
       propertyPath: messages.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -3664,6 +3800,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7734937051512406240, guid: da4b29e1045f3294c877ac3fed91bf6c, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734937051512406240, guid: da4b29e1045f3294c877ac3fed91bf6c, type: 3}
+      propertyPath: constellationOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7734937051512406240, guid: da4b29e1045f3294c877ac3fed91bf6c, type: 3}
