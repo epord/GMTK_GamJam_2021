@@ -45,23 +45,26 @@ public class ConstellationManager: MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
         Vector3 mousePosRelative = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-        
+
+        float keyboardMovementX = 0f;
+        float keyboardMovementY = 0f;
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            MoveConstellation(0, 1);
+            keyboardMovementY += 1;
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            MoveConstellation(1, 0);
+            keyboardMovementX += 1;
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            MoveConstellation(0, -1);
+            keyboardMovementY -= 1;
         }
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            MoveConstellation(-1, 0);
+            keyboardMovementX -= 1;
         }
+        MoveConstellation(keyboardMovementX, keyboardMovementY);
 
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -98,6 +101,21 @@ public class ConstellationManager: MonoBehaviour
             }
         }
 
+        if (Input.GetMouseButton(0))
+        {
+            if (starFieldPositionStart != null && clickedPosition != null)
+            {
+                float height = 2f * Camera.main.orthographicSize;
+                float width = height * Camera.main.aspect;
+                Vector3 positionDifference = new Vector3(mousePosRelative.x * width / 2, mousePosRelative.y * height / 2, 0) - clickedPosition.Value;
+                Vector3 positionDifferenceAdjusted = new Vector3(positionDifference.x * cameraMouseMovementRatio, positionDifference.y * cameraMouseMovementRatio, 0);
+                if (Math.Abs(positionDifferenceAdjusted.x) + Math.Abs(positionDifferenceAdjusted.y) > cameraDragThreshold)
+                {
+                    cameraObject.transform.position = starFieldPositionStart.Value - positionDifferenceAdjusted;
+                }
+            }
+        }
+
         if (Input.GetMouseButtonUp(0))
         {
             starFieldPositionStart = null;
@@ -114,18 +132,7 @@ public class ConstellationManager: MonoBehaviour
             }
             selectedStarOnClick = null;
         }
-
-        if (starFieldPositionStart != null && clickedPosition != null)
-        {
-            float height = 2f * Camera.main.orthographicSize;
-            float width = height * Camera.main.aspect;
-            Vector3 positionDifference = new Vector3(mousePosRelative.x * width / 2, mousePosRelative.y * height / 2, 0) - clickedPosition.Value;
-            Vector3 positionDifferenceAdjusted = new Vector3(positionDifference.x * cameraMouseMovementRatio, positionDifference.y * cameraMouseMovementRatio, 0);
-            if (Math.Abs(positionDifferenceAdjusted.x) + Math.Abs(positionDifferenceAdjusted.y) > cameraDragThreshold)
-            {
-                cameraObject.transform.position = starFieldPositionStart.Value - positionDifferenceAdjusted;
-            }
-        }
+        
         if (selectedStar != null && this.currentLine != null)
         {
             currentLine.SetPosition(1, mousePos2D);
@@ -156,9 +163,11 @@ public class ConstellationManager: MonoBehaviour
         }
     }
 
-    private void MoveConstellation(int x, int y)
+    private void MoveConstellation(float x, float y)
     {
-        cameraObject.transform.position += new Vector3(keyboardMovementRatio * x, keyboardMovementRatio * y, 0);
+        Vector3 cameraMovement = new Vector3(keyboardMovementRatio * x, keyboardMovementRatio * y, 0);
+        Vector3 normalizeMovement = cameraMovement.normalized;
+        cameraObject.transform.position += new Vector3(keyboardMovementRatio * normalizeMovement.x, keyboardMovementRatio * normalizeMovement.y, 0);
     }
 
     private void SelectStar(Star star)
