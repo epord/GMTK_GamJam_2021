@@ -9,10 +9,15 @@ public class ConstellationManager: MonoBehaviour
     public List<Constellation> constellations;
     public GameObject linePrefab;
     public GameObject contellationPrefab;
-    public float constellationMovementXRatio = 0.002f;
-    public float constellationMovementYRatio = 0.002f;
+    public float keyboardMovementRatio = 0.002f;
     public float cameraMouseMovementRatio = 1.4f;
     public float cameraDragThreshold = 0.2f;
+
+    public float cameraBorderLeftX;
+    public float cameraBorderRightX;
+    public float cameraBorderTopY;
+    public float cameraBorderBottomY;
+    
     public GameObject cameraObject;
     public AudioClip constellationCreatedClip;
     public AudioClip lineCreationClip;
@@ -123,11 +128,35 @@ public class ConstellationManager: MonoBehaviour
         {
             currentLine.SetPosition(1, mousePos2D);
         }
+
+        if (cameraObject.transform.position.x < cameraBorderLeftX)
+        {
+            cameraObject.transform.position = new Vector3(cameraBorderLeftX, cameraObject.transform.position.y,
+                cameraObject.transform.position.z);
+        }
+        
+        if (cameraObject.transform.position.x > cameraBorderRightX)
+        {
+            cameraObject.transform.position = new Vector3(cameraBorderRightX, cameraObject.transform.position.y,
+                cameraObject.transform.position.z);
+        }
+        
+        if (cameraObject.transform.position.y < cameraBorderBottomY)
+        {
+            cameraObject.transform.position = new Vector3(cameraObject.transform.position.x, cameraBorderBottomY,
+                cameraObject.transform.position.z);
+        }
+        
+        if (cameraObject.transform.position.y > cameraBorderTopY)
+        {
+            cameraObject.transform.position = new Vector3(cameraObject.transform.position.x, cameraBorderTopY,
+                cameraObject.transform.position.z);
+        }
     }
 
     private void MoveConstellation(int x, int y)
     {
-        cameraObject.transform.position += new Vector3(constellationMovementXRatio * x, constellationMovementYRatio * y, 0);
+        cameraObject.transform.position += new Vector3(keyboardMovementRatio * x, keyboardMovementRatio * y, 0);
     }
 
     private void SelectStar(Star star)
