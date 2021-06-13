@@ -9,6 +9,7 @@ public class RadioText : MonoBehaviour
     public AudioClip typeSound1;
     public AudioClip typeSound2;
     public AudioClip typeSound3;
+    public bool isShowingMessage = false;
 
     private string[] messages;
     private string message;
@@ -21,8 +22,6 @@ public class RadioText : MonoBehaviour
     {
         fadeAlpha = GetComponentInParent<FadeAlpha>();
         textComp = GetComponent<Text>();
-        string[] messages = new string[] { "Hola yo soy un capo y vos no. Ya Guey por favor idiota", "pinche pendejo" };
-        StartCoroutine(TypeText(messages));
     }
 
     public void WriteText(string[] messages)
@@ -30,12 +29,17 @@ public class RadioText : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(TypeText(messages));
     }
+    public void WriteText(string message)
+    {
+        WriteText(new string[] { message });
+    }
 
     IEnumerator TypeText(string[] messages)
     {
+        isShowingMessage = true;
         textComp.text = "";
         fadeAlpha.FadeIn();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.8f);
         foreach (string message in messages)
         {
             textComp.text = "";
@@ -52,5 +56,7 @@ public class RadioText : MonoBehaviour
             yield return new WaitForSeconds(messagePause);
         }
         fadeAlpha.FadeOut();
+        yield return new WaitForSeconds(1);
+        isShowingMessage = false;
     }
 }
