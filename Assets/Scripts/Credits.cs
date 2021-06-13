@@ -19,7 +19,7 @@ public class Credits : MonoBehaviour
         this.messages = new string[]
         {
             "We received many messages from our listeners tonight, but we can't forget to send a shout out to Robin who sent us a quote for what would be her father's birthday.",
-            "“Though my soul may set in darkness, it will rise in perfect light; I have loved the stars too fondly to be fearful of the night.” Sarah Williams"
+            "\"Though my soul may set in darkness, it will rise in perfect light; I have loved the stars too fondly to be fearful of the night.\" Sarah Williams"
         };
 
 

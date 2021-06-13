@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class RadioText : MonoBehaviour
 {
@@ -17,17 +18,20 @@ public class RadioText : MonoBehaviour
     private AudioSource audioSource;
     private FadeAlpha fadeAlpha;
 
+    private Queue<string[]> messageQ;
+
     // Use this for initialization
     void Start()
     {
+        messageQ = new Queue<string[]>();
         fadeAlpha = GetComponentInParent<FadeAlpha>();
         textComp = GetComponent<Text>();
+        StartCoroutine(TypeTextQueue());
     }
 
     public void WriteText(string[] messages)
     {
-        StopAllCoroutines();
-        StartCoroutine(TypeText(messages));
+        messageQ.Enqueue(messages);
     }
     public void WriteText(string message)
     {
@@ -37,6 +41,18 @@ public class RadioText : MonoBehaviour
     public void CloseBubble()
     {
         fadeAlpha.FadeOut();
+    }
+
+    IEnumerator TypeTextQueue()
+    {
+        while (true)
+        {
+            while (isShowingMessage || messageQ.Count == 0)
+            {
+                yield return new WaitForSeconds(5);
+            }
+            StartCoroutine(TypeText(messageQ.Dequeue()));
+        }
     }
 
     IEnumerator TypeText(string[] messages)
