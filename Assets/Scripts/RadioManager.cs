@@ -36,7 +36,6 @@ public class RadioManager : MonoBehaviour
 
     private IEnumerator ShowMessages()
     {
-        yield return new WaitForSeconds(10);
         foreach (string message in messages)
         {
             while (radioText.isShowingMessage)

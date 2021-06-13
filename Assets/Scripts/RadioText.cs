@@ -45,6 +45,7 @@ public class RadioText : MonoBehaviour
 
     IEnumerator TypeTextQueue()
     {
+        yield return new WaitForSeconds(10);
         while (true)
         {
             while (isShowingMessage || messageQ.Count == 0)

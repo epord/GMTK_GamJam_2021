@@ -36,7 +36,6 @@ public class ConstellationManager: MonoBehaviour
     private Vector3? clickedPosition;
     private AudioSource audioSource;
     private int solvedConstellations = 0;
-    private bool endingStarted = false;
 
     private void Start()
     {
