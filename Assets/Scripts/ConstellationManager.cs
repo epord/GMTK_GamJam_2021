@@ -47,7 +47,7 @@ public class ConstellationManager: MonoBehaviour
 
     void Update()
     {
-        if (solvedConstellations >= 1)
+        if (solvedConstellations >= constellations.Count)
         {
             if (!isGameOver)
             {
