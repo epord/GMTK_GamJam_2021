@@ -14,6 +14,10 @@ public class ConstellationManager: MonoBehaviour
     public float cameraMouseMovementRatio = 1.4f;
     public float cameraDragThreshold = 0.2f;
     public GameObject cameraObject;
+    public AudioClip constellationCreatedClip;
+    public AudioClip lineCreationClip;
+    public AudioClip eraseClip;
+
     private RadioText radioText;
     private Star selectedStar;
     private Star selectedStarOnClick;
@@ -169,7 +173,11 @@ public class ConstellationManager: MonoBehaviour
 
         if (this.IsAnExistingConstellation(out Constellation constellation))
         {
-            this.CreateConstellation(constellation);
+            StartCoroutine(this.CreateConstellation(constellation));
+        }
+        else if (lineCreationClip)
+        {
+            SoundManager.instance.PlaySingle(lineCreationClip);
         }
     }
 
@@ -196,6 +204,10 @@ public class ConstellationManager: MonoBehaviour
         }
         this.currentLine = null;
         this.selectedStar = null;
+        if (eraseClip)
+        {
+            SoundManager.instance.PlaySingle(eraseClip);
+        }
     }
 
     private void ResetAllLines()
@@ -208,11 +220,14 @@ public class ConstellationManager: MonoBehaviour
         this.linesCreated.Clear();
     }
 
-    private void CreateConstellation(Constellation constellation)
+    private IEnumerator CreateConstellation(Constellation constellation)
     {
-        if (this.transform.childCount == 0) return;
+        if (this.transform.childCount == 0)
+        {
+            yield return new WaitForSeconds(0); // can't return nothing
+        }
 
-        GameObject instantiatedConstellation = Instantiate(contellationPrefab);
+            GameObject instantiatedConstellation = Instantiate(contellationPrefab);
         while (this.transform.childCount > 0)
         {
             Transform child = this.transform.GetChild(0);
@@ -222,6 +237,12 @@ public class ConstellationManager: MonoBehaviour
             lineRenderer.endColor = Color.red;
         }
         this.linesCreated.Clear();
+
+        if (constellationCreatedClip)
+        {
+            SoundManager.instance.PlaySingle(constellationCreatedClip);
+        }
+        yield return new WaitForSeconds(2);
         radioText.WriteText(constellation.constellationName);
     }
 }
