@@ -430,12 +430,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236891303}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5, y: -2.658, z: -6}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.824, y: -1.846, z: -2}
   m_LocalScale: {x: 0.82, y: 0.82, z: 0.82}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1753606850}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &254359544 stripped
 Transform:
@@ -1197,8 +1197,20 @@ PrefabInstance:
       value: 620.2858
       objectReference: {fileID: 0}
     - target: {fileID: 329416327976479511, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0030537907
+      objectReference: {fileID: 0}
+    - target: {fileID: 329416327976479511, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0030537907
+      objectReference: {fileID: 0}
+    - target: {fileID: 329416327976479511, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0030537907
+      objectReference: {fileID: 0}
+    - target: {fileID: 329416327976479511, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0116
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 329416327976479511, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1210,6 +1222,38 @@ PrefabInstance:
         to send a shout out to Robin who sent us a quote for what would be her father's
         birthday.
       objectReference: {fileID: 0}
+    - target: {fileID: 329416327976479512, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329416327976479512, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329416327976479512, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329416328191043921, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 58813cf53d93d654db4edd995fc704dc, type: 3}
+    - target: {fileID: 329416328191043922, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 329416328191043922, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 329416328191043922, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 329416328191043922, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -366.44
+      objectReference: {fileID: 0}
     - target: {fileID: 329416328191043922, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
       propertyPath: m_LocalPosition.z
       value: -8
@@ -1218,6 +1262,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -4
       objectReference: {fileID: 0}
+    - target: {fileID: 329416328214875477, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a58d4a9e7f6c1844c964b9111b9b8fed, type: 3}
     - target: {fileID: 329416329035015116, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.1
