@@ -12,6 +12,7 @@ public class ConstellationManager: MonoBehaviour
     public float constellationMovementXRatio = 0.002f;
     public float constellationMovementYRatio = 0.002f;
     public float cameraMouseMovementRatio = 1.4f;
+    public float cameraDragThreshold = 0.2f;
     public GameObject cameraObject;
     private RadioText radioText;
     private Star selectedStar;
@@ -70,7 +71,6 @@ public class ConstellationManager: MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            // Selected the Sky.
             starFieldPositionStart = cameraObject.transform.position;
             float height = 2f * Camera.main.orthographicSize;
             float width = height * Camera.main.aspect;
@@ -110,7 +110,10 @@ public class ConstellationManager: MonoBehaviour
             float width = height * Camera.main.aspect;
             Vector3 positionDifference = new Vector3(mousePosRelative.x * width / 2, mousePosRelative.y * height / 2, 0) - clickedPosition.Value;
             Vector3 positionDifferenceAdjusted = new Vector3(positionDifference.x * cameraMouseMovementRatio, positionDifference.y * cameraMouseMovementRatio, 0);
-            cameraObject.transform.position = starFieldPositionStart.Value - positionDifferenceAdjusted;
+            if (Math.Abs(positionDifferenceAdjusted.x) + Math.Abs(positionDifferenceAdjusted.y) > cameraDragThreshold)
+            {
+                cameraObject.transform.position = starFieldPositionStart.Value - positionDifferenceAdjusted;
+            }
         }
         if (selectedStar != null && this.currentLine != null)
         {
@@ -151,8 +154,6 @@ public class ConstellationManager: MonoBehaviour
         lineObject.transform.parent = this.transform;
         LineRenderer lineRenderer = lineObject.GetComponent<LineRenderer>();
         List<Vector3> pos = new List<Vector3> { from, to };
-        lineRenderer.startWidth = 0.1f;
-        lineRenderer.endWidth = 0.1f;
         lineRenderer.SetPositions(pos.ToArray());
         lineRenderer.useWorldSpace = true;
         this.currentLine = lineRenderer;
