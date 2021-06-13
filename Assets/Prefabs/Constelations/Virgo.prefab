@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb8aa0da03234b44af3f86ce7cf7628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
 --- !u!58 &4678886371939950912
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -208,6 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb8aa0da03234b44af3f86ce7cf7628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
 --- !u!58 &4678886371976341968
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -320,6 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb8aa0da03234b44af3f86ce7cf7628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
 --- !u!58 &4678886372170477733
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -514,6 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb8aa0da03234b44af3f86ce7cf7628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
 --- !u!58 &4678886372470048642
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -626,6 +630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb8aa0da03234b44af3f86ce7cf7628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
 --- !u!58 &4678886372546254244
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -738,6 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb8aa0da03234b44af3f86ce7cf7628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
 --- !u!58 &4678886372582829269
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -850,6 +856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb8aa0da03234b44af3f86ce7cf7628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
 --- !u!58 &4678886372611717818
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -962,6 +969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb8aa0da03234b44af3f86ce7cf7628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
 --- !u!58 &4678886372693814554
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1074,6 +1082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb8aa0da03234b44af3f86ce7cf7628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
 --- !u!58 &4678886372989547944
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1162,4 +1171,4 @@ MonoBehaviour:
   - {fileID: 4678886373717938966}
   - {fileID: 4678886372512402967}
   - {fileID: 4678886373054462765}
-  constellationName: Virgo
+  messages: []
