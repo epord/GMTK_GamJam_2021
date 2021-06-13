@@ -12,6 +12,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5273962264614375944, guid: 583cd15e18b2720468b1804e9489ad20, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273962264614375944, guid: 583cd15e18b2720468b1804e9489ad20, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273962264614375944, guid: 583cd15e18b2720468b1804e9489ad20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.958786
       objectReference: {fileID: 0}
@@ -57,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5273962264614375946, guid: 583cd15e18b2720468b1804e9489ad20, type: 3}
       propertyPath: m_Name
-      value: Aries
+      value: Aries Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5273962264614375946, guid: 583cd15e18b2720468b1804e9489ad20, type: 3}
       propertyPath: m_IsActive

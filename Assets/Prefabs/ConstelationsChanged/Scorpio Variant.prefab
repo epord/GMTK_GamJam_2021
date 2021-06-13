@@ -66,11 +66,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1056595261283830148, guid: 306ccd379d4108a448c8fb6b75c961dd, type: 3}
       propertyPath: m_Name
-      value: Scorpio
+      value: Scorpio Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1056595261283830150, guid: 306ccd379d4108a448c8fb6b75c961dd, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1056595261283830150, guid: 306ccd379d4108a448c8fb6b75c961dd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1056595261283830150, guid: 306ccd379d4108a448c8fb6b75c961dd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1056595261283830150, guid: 306ccd379d4108a448c8fb6b75c961dd, type: 3}
       propertyPath: m_LocalPosition.x

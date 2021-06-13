@@ -12,6 +12,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 695658545626170967, guid: 221cc1d6e8457e244b6680ecd68b0dbb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 695658545626170967, guid: 221cc1d6e8457e244b6680ecd68b0dbb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 695658545626170967, guid: 221cc1d6e8457e244b6680ecd68b0dbb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.88
       objectReference: {fileID: 0}
@@ -51,9 +59,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 2413989509026902025, guid: 221cc1d6e8457e244b6680ecd68b0dbb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7215858114726788000, guid: 221cc1d6e8457e244b6680ecd68b0dbb, type: 3}
       propertyPath: m_Name
-      value: Libra
+      value: Libra Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 221cc1d6e8457e244b6680ecd68b0dbb, type: 3}
