@@ -41,7 +41,7 @@ public class Credits : MonoBehaviour
             "Coding & Development: \n Diego de Rochebouët \n Pedro Balaguer",
             "Art & visuals: \n Federico Jiménez Poza\n Ezequiel Inverni\n Carlos Chaves ",
             "Writing: \n Fidel Chaves",
-            "And thanks to GMTK team for organising the GMTK Game Jam 2021.",
+            "And thanks to GMTK team for organizing the GMTK Game Jam 2021.",
             "Thank you for playing!"
            };
 
