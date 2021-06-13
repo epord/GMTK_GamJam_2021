@@ -29,10 +29,17 @@ public class RadioText : MonoBehaviour
         StartCoroutine(TypeTextQueue());
     }
 
+    public void WriteTextNow(string[] messages)
+    {
+        StopAllCoroutines();
+        StartCoroutine(TypeText(messages));
+    }
+    
     public void WriteText(string[] messages)
     {
         messageQ.Enqueue(messages);
     }
+    
     public void WriteText(string message)
     {
         WriteText(new string[] { message });

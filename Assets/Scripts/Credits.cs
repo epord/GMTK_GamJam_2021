@@ -45,11 +45,11 @@ public class Credits : MonoBehaviour
         radioText.CloseBubble();
         radioManager.StopMessages();
         yield return new WaitForSeconds(2f);
-        radioText.WriteText(messages);
+        radioText.WriteTextNow(messages);
         yield return new WaitForSeconds(45f);
         radioText.CloseBubble();
         yield return new WaitForSeconds(10f);
-        radioText.WriteText(credits);
+        radioText.WriteTextNow(credits);
     }
 
     void Update()
