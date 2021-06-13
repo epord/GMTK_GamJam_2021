@@ -38,11 +38,11 @@ public class Credits : MonoBehaviour
     {
         string[] credits= new string[]
            {
-            "Coding & Development: \n Diego de Rochebouët \n Pedro Balaguer",
-            "Art & visuals: \n Federico Jiménez Poza\n Ezequiel Inverni\n Carlos Chaves ",
-            "Writing: \n Fidel Chaves",
-            "And thanks to GMTK team for organizing the GMTK Game Jam 2021.",
-            "Thank you for playing!"
+               "And now, for our closing message, lets give a big thanks to the ones that made this show possible",
+               "Technical team (coding): \n Diego de Rochebouët \n Pedro Balaguer",
+               "AV club (arts): \n Federico Jiménez Poza\n Ezequiel Inverni\n Carlos Chaves ",
+               "And your host (writing): \n Fidel Chaves",
+               "Thanks for playing!"
            };
 
         radioText.CloseBubble();
