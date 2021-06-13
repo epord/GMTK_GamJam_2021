@@ -38,8 +38,11 @@ public class Credits : MonoBehaviour
     {
         string[] credits= new string[]
            {
-            "Credits1, Epord es el mas capo",
-            "Credits2, hector de buen comer"
+            "Coding & Development: \n Diego de Rochebouët \n Pedro Balaguer",
+            "Art & visuals: \n Federico Jiménez Poza\n Ezequiel Inverni\n Carlos Chaves ",
+            "Writing: \n Fidel Chaves",
+            "And thanks to GMTK team for organising the GMTK Game Jam 2021.",
+            "Thank you for playing!"
            };
 
         radioText.CloseBubble();
