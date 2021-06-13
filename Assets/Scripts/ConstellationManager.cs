@@ -32,10 +32,12 @@ public class ConstellationManager: MonoBehaviour
 
     private Vector3? starFieldPositionStart;
     private Vector3? clickedPosition;
+    private AudioSource audioSource;
 
     private void Start()
     {
         radioText = FindObjectOfType<RadioText>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -206,7 +208,8 @@ public class ConstellationManager: MonoBehaviour
         }
         else if (lineCreationClip)
         {
-            SoundManager.instance.PlaySingle(lineCreationClip);
+            audioSource.clip = lineCreationClip;
+            audioSource.Play();
         }
     }
 
@@ -235,7 +238,8 @@ public class ConstellationManager: MonoBehaviour
         this.selectedStar = null;
         if (eraseClip)
         {
-            SoundManager.instance.PlaySingle(eraseClip);
+            audioSource.clip = eraseClip;
+            audioSource.Play();
         }
     }
 
@@ -269,9 +273,10 @@ public class ConstellationManager: MonoBehaviour
 
         if (constellationCreatedClip)
         {
-            SoundManager.instance.PlaySingle(constellationCreatedClip);
+            audioSource.clip = constellationCreatedClip;
+            audioSource.Play();
         }
         yield return new WaitForSeconds(2);
-        radioText.WriteText(constellation.constellationName);
+        radioText.WriteText(new string[] { constellation.constellationName });
     }
 }
