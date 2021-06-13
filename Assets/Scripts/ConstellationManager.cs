@@ -276,7 +276,7 @@ public class ConstellationManager: MonoBehaviour
             audioSource.clip = constellationCreatedClip;
             audioSource.Play();
         }
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.2f);
         radioText.WriteText(constellation.messages);
     }
 }
