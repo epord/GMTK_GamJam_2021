@@ -25,6 +25,7 @@ public class ConstellationManager: MonoBehaviour
     public AudioClip eraseClip;
 
     public Credits credits;
+    public GameObject lightToDelete;
 
     private RadioText radioText;
     private Star selectedStar;
@@ -37,6 +38,7 @@ public class ConstellationManager: MonoBehaviour
     private Vector3? clickedPosition;
     private AudioSource audioSource;
     private int solvedConstellations = 0;
+    private bool isGameOver = false;
 
     private void Start()
     {
@@ -48,8 +50,13 @@ public class ConstellationManager: MonoBehaviour
     {
         if (solvedConstellations >= constellations.Count || Input.GetKeyDown(KeyCode.Y))
         {
-            credits.EnableCredits();
-            return;
+            if (!isGameOver)
+            {
+                isGameOver = true;
+                Destroy(lightToDelete);
+                credits.EnableCredits();
+                return;
+            }
         }
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
