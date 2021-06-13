@@ -29,7 +29,6 @@ public class ConstellationManager: MonoBehaviour
 
     private RadioText radioText;
     private Star selectedStar;
-    private Star selectedStarOnClick;
     private LineRenderer currentLine;
     // Each pair of stars represents a line (similar to what is done in 3D models with polygons)
     private List<Star> linesCreated = new List<Star>();
@@ -102,19 +101,22 @@ public class ConstellationManager: MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            starFieldPositionStart = cameraObject.transform.position;
-            float height = 2f * Camera.main.orthographicSize;
-            float width = height * Camera.main.aspect;
-            clickedPosition = new Vector3(mousePosRelative.x * width / 2, mousePosRelative.y * height / 2, 0);
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
             if (hit.collider != null)
             {
                 GameObject collider = hit.collider.gameObject;
                 Star star = collider.GetComponent(typeof(Star)) as Star;
-                if (star != null && !star.locked)
+                if (star != null)
                 {
-                    selectedStarOnClick = star;
+                    SelectStar(star);
                 }
+            }
+            else
+            {
+                starFieldPositionStart = cameraObject.transform.position;
+                float height = 2f * Camera.main.orthographicSize;
+                float width = height * Camera.main.aspect;
+                clickedPosition = new Vector3(mousePosRelative.x * width / 2, mousePosRelative.y * height / 2, 0);
             }
         }
 
@@ -137,17 +139,6 @@ public class ConstellationManager: MonoBehaviour
         {
             starFieldPositionStart = null;
             clickedPosition = null;
-            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
-            if (hit.collider != null)
-            {
-                GameObject collider = hit.collider.gameObject;
-                Star star = collider.GetComponent(typeof(Star)) as Star;
-                if (star != null && selectedStarOnClick == star)
-                {
-                    SelectStar(star);
-                }
-            }
-            selectedStarOnClick = null;
         }
         
         if (selectedStar != null && this.currentLine != null)
@@ -184,7 +175,7 @@ public class ConstellationManager: MonoBehaviour
     {
         Vector3 cameraMovement = new Vector3(keyboardMovementRatio * x, keyboardMovementRatio * y, 0);
         Vector3 normalizeMovement = cameraMovement.normalized;
-        cameraObject.transform.position += new Vector3(keyboardMovementRatio * normalizeMovement.x, keyboardMovementRatio * normalizeMovement.y, 0);
+        cameraObject.transform.position += new Vector3(keyboardMovementRatio * normalizeMovement.x * Time.deltaTime, keyboardMovementRatio * normalizeMovement.y * Time.deltaTime, 0);
     }
 
     private void SelectStar(Star star)

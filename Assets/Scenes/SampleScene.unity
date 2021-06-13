@@ -1183,9 +1183,9 @@ MonoBehaviour:
   linePrefab: {fileID: 2065753432467913637, guid: b42c187981b4ab141b35539e1b1580e4, type: 3}
   contellationPrefab: {fileID: 7793604319959165425, guid: 832fc97125ad1b441b13dac058cc8dbf, type: 3}
   constellationBubble: {fileID: 263684940}
-  keyboardMovementRatio: 0.01
+  keyboardMovementRatio: 5
   cameraMouseMovementRatio: 1.4
-  cameraDragThreshold: 0.05
+  cameraDragThreshold: 0
   cameraBorderLeftX: -30
   cameraBorderRightX: 30
   cameraBorderTopY: 20
