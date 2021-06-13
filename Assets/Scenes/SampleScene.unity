@@ -1195,6 +1195,7 @@ MonoBehaviour:
   lineCreationClip: {fileID: 8300000, guid: 14f26958c79d7e947a5019189064eb3d, type: 3}
   eraseClip: {fileID: 8300000, guid: 8735b77eda14e6b4486003ff0a3e5754, type: 3}
   credits: {fileID: 1906791235}
+  lightToDelete: {fileID: 0}
 --- !u!4 &836150039
 Transform:
   m_ObjectHideFlags: 0
@@ -2696,9 +2697,41 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 4767976475701361927, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767976475701361927, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: amplitude
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 4767976475884780760, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767976475884780761, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767976475884780761, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: amplitude
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767976476621020195, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: speed
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767976476621020195, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: amplitude
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063199094599556253, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063199094599556253, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
+      propertyPath: amplitude
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 209cbf11113a99d41beee8c6def8c081, type: 3}
