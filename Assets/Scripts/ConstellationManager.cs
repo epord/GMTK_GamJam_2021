@@ -260,7 +260,7 @@ public class ConstellationManager: MonoBehaviour
             yield return new WaitForSeconds(0); // can't return nothing
         }
 
-            GameObject instantiatedConstellation = Instantiate(contellationPrefab);
+        GameObject instantiatedConstellation = Instantiate(contellationPrefab);
         while (this.transform.childCount > 0)
         {
             Transform child = this.transform.GetChild(0);
