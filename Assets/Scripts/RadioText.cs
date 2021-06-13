@@ -34,6 +34,11 @@ public class RadioText : MonoBehaviour
         WriteText(new string[] { message });
     }
 
+    public void CloseBubble()
+    {
+        fadeAlpha.FadeOut();
+    }
+
     IEnumerator TypeText(string[] messages)
     {
         isShowingMessage = true;

@@ -23,6 +23,8 @@ public class ConstellationManager: MonoBehaviour
     public AudioClip lineCreationClip;
     public AudioClip eraseClip;
 
+    public Credits credits;
+
     private RadioText radioText;
     private Star selectedStar;
     private Star selectedStarOnClick;
@@ -33,6 +35,8 @@ public class ConstellationManager: MonoBehaviour
     private Vector3? starFieldPositionStart;
     private Vector3? clickedPosition;
     private AudioSource audioSource;
+    private int solvedConstellations = 0;
+    private bool endingStarted = false;
 
     private void Start()
     {
@@ -42,6 +46,12 @@ public class ConstellationManager: MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.Y) || solvedConstellations >= constellations.Count)
+        {
+            credits.EnableCredits();
+            return;
+        }
+
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
         Vector3 mousePosRelative = Camera.main.ScreenToViewportPoint(Input.mousePosition);
@@ -287,5 +297,6 @@ public class ConstellationManager: MonoBehaviour
         }
         yield return new WaitForSeconds(0.2f);
         radioText.WriteText(constellation.messages);
+        solvedConstellations++;
     }
 }
