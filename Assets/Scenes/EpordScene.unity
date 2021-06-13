@@ -683,7 +683,8 @@ MonoBehaviour:
   contellationPrefab: {fileID: 1229172539}
   constellationMovementXRatio: 1
   constellationMovementYRatio: 1
-  starField: {fileID: 0}
+  cameraMouseMovementRatio: 1.4
+  cameraObject: {fileID: 519420028}
 --- !u!4 &836150039
 Transform:
   m_ObjectHideFlags: 0
