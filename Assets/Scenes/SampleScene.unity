@@ -500,8 +500,8 @@ MonoBehaviour:
   cameraDragThreshold: 0.05
   cameraBorderLeftX: -30
   cameraBorderRightX: 30
-  cameraBorderTopY: 20
-  cameraBorderBottomY: -20
+  cameraBorderTopY: 25
+  cameraBorderBottomY: -25
   cameraObject: {fileID: 2039570870}
   constellationCreatedClip: {fileID: 8300000, guid: 5f3f4c20a59ea9d4789dd985eb0e853c, type: 3}
   lineCreationClip: {fileID: 8300000, guid: 14f26958c79d7e947a5019189064eb3d, type: 3}
