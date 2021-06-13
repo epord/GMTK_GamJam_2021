@@ -12,7 +12,7 @@ public class ConstellationManager: MonoBehaviour
     public float constellationMovementXRatio = 0.002f;
     public float constellationMovementYRatio = 0.002f;
     public float cameraMouseMovementRatio = 1.4f;
-    public GameObject starField;
+    public GameObject cameraObject;
     
     private Star selectedStar;
     private Star selectedStarOnClick;
@@ -20,10 +20,8 @@ public class ConstellationManager: MonoBehaviour
     // Each pair of stars represents a line (similar to what is done in 3D models with polygons)
     private List<Star> linesCreated = new List<Star>();
 
-    private Vector3? starFieldPositionStart = null;
-    private Vector3? clickedPosition = null;
-    public int counter = 0;
-
+    private Vector3? starFieldPositionStart;
+    private Vector3? clickedPosition;
 
     void Update()
     {
@@ -73,7 +71,7 @@ public class ConstellationManager: MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             // Selected the Sky.
-            starFieldPositionStart = starField.transform.position;
+            starFieldPositionStart = cameraObject.transform.position;
             float height = 2f * Camera.main.orthographicSize;
             float width = height * Camera.main.aspect;
             clickedPosition = new Vector3(mousePosRelative.x * width / 2, mousePosRelative.y * height / 2, 0);
@@ -112,7 +110,7 @@ public class ConstellationManager: MonoBehaviour
             float width = height * Camera.main.aspect;
             Vector3 positionDifference = new Vector3(mousePosRelative.x * width / 2, mousePosRelative.y * height / 2, 0) - clickedPosition.Value;
             Vector3 positionDifferenceAdjusted = new Vector3(positionDifference.x * cameraMouseMovementRatio, positionDifference.y * cameraMouseMovementRatio, 0);
-            starField.transform.position = starFieldPositionStart.Value - positionDifferenceAdjusted;
+            cameraObject.transform.position = starFieldPositionStart.Value - positionDifferenceAdjusted;
         }
         if (selectedStar != null && this.currentLine != null)
         {
@@ -122,7 +120,7 @@ public class ConstellationManager: MonoBehaviour
 
     private void MoveConstellation(int x, int y)
     {
-        starField.transform.position += new Vector3(constellationMovementXRatio * x, constellationMovementYRatio * y, 0);
+        cameraObject.transform.position += new Vector3(constellationMovementXRatio * x, constellationMovementYRatio * y, 0);
     }
 
     private void SelectStar(Star star)
