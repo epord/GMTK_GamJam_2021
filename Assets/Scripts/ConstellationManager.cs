@@ -106,7 +106,7 @@ public class ConstellationManager: MonoBehaviour
             {
                 GameObject collider = hit.collider.gameObject;
                 Star star = collider.GetComponent(typeof(Star)) as Star;
-                if (star != null)
+                if (star != null && !star.locked)
                 {
                     SelectStar(star);
                 }
@@ -214,7 +214,7 @@ public class ConstellationManager: MonoBehaviour
     private void ConsolidateLine(Star endStar)
     {
         this.currentLine.SetPosition(1, endStar.transform.position);
-        for (int i = 0; i < linesCreated.Count; i+=2)
+        for (int i = 0; i < linesCreated.Count - 1; i+=2)
         {
             Star s1 = linesCreated[i];
             Star s2 = linesCreated[i+1];
