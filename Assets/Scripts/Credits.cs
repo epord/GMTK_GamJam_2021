@@ -38,9 +38,9 @@ public class Credits : MonoBehaviour
     {
         string[] credits= new string[]
            {
-               "And now, for our closing message, lets give a big thanks to the ones that made this show possible",
+               "And now, for our closing message, lets give a big thanks to the ones that made this show possible.",
                "Technical team (coding): \n Diego de Rochebouët \n Pedro Balaguer",
-               "AV club (arts): \n Federico Jiménez Poza\n Ezequiel Inverni\n Carlos Chaves ",
+               "AV club (arts): \n Federico Jiménez Poza\n Ezequiel Inverni\n Carlos Chaves",
                "And your host (writing): \n Fidel Chaves",
                "Thanks for playing!"
            };
