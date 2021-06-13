@@ -243,6 +243,6 @@ public class ConstellationManager: MonoBehaviour
             SoundManager.instance.PlaySingle(constellationCreatedClip);
         }
         yield return new WaitForSeconds(2);
-        radioText.WriteText(constellation.constellationName);
+        radioText.WriteText(new string[] { constellation.constellationName });
     }
 }
