@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
@@ -21,11 +22,15 @@ public class RadioText : MonoBehaviour
     private Queue<string[]> messageQ;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         messageQ = new Queue<string[]>();
         fadeAlpha = GetComponentInParent<FadeAlpha>();
         textComp = GetComponent<Text>();
+    }
+
+    private void Start()
+    {
         StartCoroutine(TypeTextQueue());
     }
 
