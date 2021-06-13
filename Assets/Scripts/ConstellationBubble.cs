@@ -43,7 +43,7 @@ public class ConstellationBubble : MonoBehaviour
 
     void PrevConstellation()
     {
-        this.currentConstellationIndex = (this.currentConstellationIndex - 1) % constellations.Length;
+        this.currentConstellationIndex = (this.currentConstellationIndex - 1 + constellations.Length) % constellations.Length;
         this.currentConstelationRenderer.sprite = constellations[this.currentConstellationIndex];
     }
 
