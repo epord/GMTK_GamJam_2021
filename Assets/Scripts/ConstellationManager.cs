@@ -13,7 +13,8 @@ public class ConstellationManager: MonoBehaviour
     public float constellationMovementYRatio = 0.002f;
     public float cameraMouseMovementRatio = 1.4f;
     public GameObject starField;
-    
+
+    private RadioText radioText;
     private Star selectedStar;
     private Star selectedStarOnClick;
     private LineRenderer currentLine;
@@ -23,6 +24,11 @@ public class ConstellationManager: MonoBehaviour
     private Vector3? starFieldPositionStart = null;
     private Vector3? clickedPosition = null;
     public int counter = 0;
+
+    private void Start()
+    {
+        radioText = FindObjectOfType<RadioText>();
+    }
 
 
     void Update()
@@ -51,11 +57,6 @@ public class ConstellationManager: MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             ResetAllLines();
-        }
-
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            CreateConstellation();
         }
         
         if (Input.GetMouseButtonDown(1))
@@ -170,7 +171,7 @@ public class ConstellationManager: MonoBehaviour
 
         if (this.IsAnExistingConstellation(out Constellation constellation))
         {
-            this.CreateConstellation();
+            this.CreateConstellation(constellation);
         }
     }
 
@@ -209,19 +210,20 @@ public class ConstellationManager: MonoBehaviour
         this.linesCreated.Clear();
     }
 
-    private void CreateConstellation()
+    private void CreateConstellation(Constellation constellation)
     {
         if (this.transform.childCount == 0) return;
 
-        GameObject constellation = Instantiate(contellationPrefab);
+        GameObject instantiatedConstellation = Instantiate(contellationPrefab);
         while (this.transform.childCount > 0)
         {
             Transform child = this.transform.GetChild(0);
-            child.transform.parent = constellation.transform;
+            child.transform.parent = instantiatedConstellation.transform;
             LineRenderer lineRenderer = child.gameObject.GetComponent<LineRenderer>();
             lineRenderer.startColor = Color.red;
             lineRenderer.endColor = Color.red;
         }
         this.linesCreated.Clear();
+        radioText.WriteText(constellation.constellationName);
     }
 }
