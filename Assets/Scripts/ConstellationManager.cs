@@ -103,7 +103,7 @@ public class ConstellationManager: MonoBehaviour
             {
                 GameObject collider = hit.collider.gameObject;
                 Star star = collider.GetComponent(typeof(Star)) as Star;
-                if (star != null)
+                if (star != null && !star.locked)
                 {
                     selectedStarOnClick = star;
                 }
@@ -215,6 +215,19 @@ public class ConstellationManager: MonoBehaviour
     private void ConsolidateLine(Star endStar)
     {
         this.currentLine.SetPosition(1, endStar.transform.position);
+        for (int i = 0; i < linesCreated.Count; i+=2)
+        {
+            Star s1 = linesCreated[i];
+            Star s2 = linesCreated[i+1];
+            if (s1 == endStar && s2 == this.selectedStar || s2 == endStar && s1 == this.selectedStar)
+            {
+                this.currentLine = null;
+                this.selectedStar = null;
+                audioSource.clip = lineCreationClip;
+                audioSource.Play();
+                return;
+            }
+        }
         this.linesCreated.Add(this.selectedStar);
         this.linesCreated.Add(endStar);
         this.currentLine = null;
@@ -276,6 +289,11 @@ public class ConstellationManager: MonoBehaviour
         if (this.transform.childCount == 0)
         {
             yield return new WaitForSeconds(0); // can't return nothing
+        }
+        
+        foreach (var star in constellation.stars)
+        {
+            star.locked = true;
         }
 
         GameObject instantiatedConstellation = Instantiate(contellationPrefab);
