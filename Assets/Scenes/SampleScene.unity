@@ -1478,6 +1478,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 396475260129094911, guid: 9e7d0a02ce78a4a4c8d395c41c9d1073, type: 3}
+      propertyPath: messages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 396475260129094911, guid: 9e7d0a02ce78a4a4c8d395c41c9d1073, type: 3}
+      propertyPath: messages.Array.data[0]
+      value: Greek mythology associates Sagittarius with the centaur Chiron, who
+        mentored Achilles.
+      objectReference: {fileID: 0}
+    - target: {fileID: 396475260129094911, guid: 9e7d0a02ce78a4a4c8d395c41c9d1073, type: 3}
+      propertyPath: messages.Array.data[1]
+      value: The center of the Milky Way lies in the westernmost part of Sagittarius.
+      objectReference: {fileID: 0}
+    - target: {fileID: 396475260129094911, guid: 9e7d0a02ce78a4a4c8d395c41c9d1073, type: 3}
+      propertyPath: messages.Array.data[2]
+      value: Astronomers believe that one of its components, known as Sagittarius
+        A*, is associated with a supermassive black hole at the center of the galaxy.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e7d0a02ce78a4a4c8d395c41c9d1073, type: 3}
 --- !u!1001 &1241707127042645276
@@ -1494,6 +1512,25 @@ PrefabInstance:
     - target: {fileID: 1241707127495457288, guid: 7a861c72526144e429b37df3f440a1e4, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241707127495457289, guid: 7a861c72526144e429b37df3f440a1e4, type: 3}
+      propertyPath: messages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241707127495457289, guid: 7a861c72526144e429b37df3f440a1e4, type: 3}
+      propertyPath: messages.Array.data[0]
+      value: Egyptians worshipped the constellation, which they referred to as "Knem",
+        because it was present during the flooding of the Nile River.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241707127495457289, guid: 7a861c72526144e429b37df3f440a1e4, type: 3}
+      propertyPath: messages.Array.data[1]
+      value: "The Leonids occur in November, peaking on November 14\u201315, and
+        have a radiant close to Gamma Leonis."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241707127495457289, guid: 7a861c72526144e429b37df3f440a1e4, type: 3}
+      propertyPath: messages.Array.data[2]
+      value: Archaeological evidence indicates that the Mesopotamians had a similar
+        constellation as early as 4000 BCE.
       objectReference: {fileID: 0}
     - target: {fileID: 1241707127495457290, guid: 7a861c72526144e429b37df3f440a1e4, type: 3}
       propertyPath: m_RootOrder
@@ -1551,6 +1588,25 @@ PrefabInstance:
     - target: {fileID: 2356947463022642325, guid: 4eed003a78e978648b2e1314c58486e2, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356947463147412144, guid: 4eed003a78e978648b2e1314c58486e2, type: 3}
+      propertyPath: messages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356947463147412144, guid: 4eed003a78e978648b2e1314c58486e2, type: 3}
+      propertyPath: messages.Array.data[0]
+      value: 'Capricornus is commonly represented in the form of a sea goat: a mythical
+        creature that is half goat, half fish.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356947463147412144, guid: 4eed003a78e978648b2e1314c58486e2, type: 3}
+      propertyPath: messages.Array.data[1]
+      value: It was explicitly recorded in the Babylonian star catalogues before
+        1000 BCE
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356947463147412144, guid: 4eed003a78e978648b2e1314c58486e2, type: 3}
+      propertyPath: messages.Array.data[2]
+      value: Capricornus is a faint constellation, with only one star above magnitude
+        3.
       objectReference: {fileID: 0}
     - target: {fileID: 2356947463147412145, guid: 4eed003a78e978648b2e1314c58486e2, type: 3}
       propertyPath: m_RootOrder
@@ -1625,6 +1681,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3313278470956635514, guid: d214d78cbc7031f4d9d9444f8b54b05d, type: 3}
+      propertyPath: messages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313278470956635514, guid: d214d78cbc7031f4d9d9444f8b54b05d, type: 3}
+      propertyPath: messages.Array.data[0]
+      value: Divine associations with Pisces include Poseidon/Neptune, Aphrodite,
+        Eros, Typhon, Vishnu and the Sumerian goddess Inanna.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313278470956635514, guid: d214d78cbc7031f4d9d9444f8b54b05d, type: 3}
+      propertyPath: messages.Array.data[1]
+      value: "It is the Latin word for \"Fishes.\" It\u2019s one of the earliest
+        zodiac signs on record, appearing as far back as 2300 BC on an Egyptian coffin
+        lid."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313278470956635514, guid: d214d78cbc7031f4d9d9444f8b54b05d, type: 3}
+      propertyPath: messages.Array.data[2]
+      value: Pisces contains Van Maanen's Star, the closest-known white dwarf to
+        us.
+      objectReference: {fileID: 0}
     - target: {fileID: 3313278470956635515, guid: d214d78cbc7031f4d9d9444f8b54b05d, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1678,6 +1754,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 266578868}
     m_Modifications:
+    - target: {fileID: 395618902179764168, guid: a5bc353d96f7a344998b87f1ae4d5f60, type: 3}
+      propertyPath: messages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 395618902179764168, guid: a5bc353d96f7a344998b87f1ae4d5f60, type: 3}
+      propertyPath: messages.Array.data[0]
+      value: Libra is Latin for scales, based on the scales of Justice.
+      objectReference: {fileID: 0}
+    - target: {fileID: 395618902179764168, guid: a5bc353d96f7a344998b87f1ae4d5f60, type: 3}
+      propertyPath: messages.Array.data[1]
+      value: Romans put a lot of trust in the so-called "balanced sign".
+      objectReference: {fileID: 0}
+    - target: {fileID: 395618902179764168, guid: a5bc353d96f7a344998b87f1ae4d5f60, type: 3}
+      propertyPath: messages.Array.data[2]
+      value: Libra is associated with the Roman deity Iustitia.
+      objectReference: {fileID: 0}
     - target: {fileID: 469687658154039401, guid: a5bc353d96f7a344998b87f1ae4d5f60, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1743,6 +1835,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 266578868}
     m_Modifications:
+    - target: {fileID: 4491958674768585484, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
+      propertyPath: messages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491958674768585484, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
+      propertyPath: messages.Array.data[0]
+      value: Most myths generally view Virgo as a maiden with heavy association with
+        wheat.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491958674768585484, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
+      propertyPath: messages.Array.data[1]
+      value: "It\u2019s often related to Demeter or Proserpina, two greco roman goddesses."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491958674768585484, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
+      propertyPath: messages.Array.data[2]
+      value: The ancient Zodiac ended in the constellation Leo and began with Virgo.
+      objectReference: {fileID: 0}
     - target: {fileID: 4491958674768585486, guid: 52d9e379ead31064ab149c1092a75e33, type: 3}
       propertyPath: m_Name
       value: Virgo
@@ -1864,6 +1973,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4863188295439578157, guid: 4134a4a88dd2aa34ab09b7e28c3ba80f, type: 3}
+      propertyPath: messages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863188295439578157, guid: 4134a4a88dd2aa34ab09b7e28c3ba80f, type: 3}
+      propertyPath: messages.Array.data[0]
+      value: Aquarius is identified as GU.LA "The Great One" in the Babylonian star
+        catalogues and represents the god Ea himself.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863188295439578157, guid: 4134a4a88dd2aa34ab09b7e28c3ba80f, type: 3}
+      propertyPath: messages.Array.data[1]
+      value: The two brightest stars, Alpha and Beta Aquarii, are luminous yellow
+        supergiants, of spectral types G0Ib and G2Ib respectively.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863188295439578157, guid: 4134a4a88dd2aa34ab09b7e28c3ba80f, type: 3}
+      propertyPath: messages.Array.data[2]
+      value: 'There are three major meteor showers with radiants in Aquarius: the
+        Eta Aquariids, the Delta Aquariids, and the Iota Aquariids.'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4134a4a88dd2aa34ab09b7e28c3ba80f, type: 3}
 --- !u!1001 &4895133728688431208
@@ -1884,6 +2012,24 @@ PrefabInstance:
     - target: {fileID: 4895133729301575784, guid: 218ca05c37db96e46bf4dfb3cf6d240f, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895133729301575785, guid: 218ca05c37db96e46bf4dfb3cf6d240f, type: 3}
+      propertyPath: messages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895133729301575785, guid: 218ca05c37db96e46bf4dfb3cf6d240f, type: 3}
+      propertyPath: messages.Array.data[0]
+      value: 'Scorpio is associated with three different animals: the scorpion, the
+        snake, and the eagle (or phoenix).'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895133729301575785, guid: 218ca05c37db96e46bf4dfb3cf6d240f, type: 3}
+      propertyPath: messages.Array.data[1]
+      value: Scorpius contains many bright stars, including Antares, "rival of Mars".
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895133729301575785, guid: 218ca05c37db96e46bf4dfb3cf6d240f, type: 3}
+      propertyPath: messages.Array.data[2]
+      value: Due to its location straddling the Milky Way, this constellation contains
+        many deep-sky objects.
       objectReference: {fileID: 0}
     - target: {fileID: 4895133729301575786, guid: 218ca05c37db96e46bf4dfb3cf6d240f, type: 3}
       propertyPath: m_RootOrder
@@ -1990,6 +2136,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6375506827285047363, guid: 876846de3879e3049a3f07f500551f3e, type: 3}
+      propertyPath: messages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375506827285047363, guid: 876846de3879e3049a3f07f500551f3e, type: 3}
+      propertyPath: messages.Array.data[0]
+      value: Gemini is Latin for twins, and it is associated with the twins Castor
+        and Pollux in Greek mythology.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375506827285047363, guid: 876846de3879e3049a3f07f500551f3e, type: 3}
+      propertyPath: messages.Array.data[1]
+      value: In Babylonian astronomy, their names were Lugal-irra and Meslamta-ea,
+        meaning "The Mighty King" and "The One who has arisen from the Underworld".
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375506827285047363, guid: 876846de3879e3049a3f07f500551f3e, type: 3}
+      propertyPath: messages.Array.data[2]
+      value: During the first century AD, axial precession shifted it into Gemini.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 876846de3879e3049a3f07f500551f3e, type: 3}
 --- !u!1001 &7018215711895445946
@@ -2055,6 +2219,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7018215713744302525, guid: 47eda0ed28f8b48408cddeaf2064822b, type: 3}
+      propertyPath: messages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7018215713744302525, guid: 47eda0ed28f8b48408cddeaf2064822b, type: 3}
+      propertyPath: messages.Array.data[0]
+      value: Its name is Latin for crab and it is commonly represented as one.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7018215713744302525, guid: 47eda0ed28f8b48408cddeaf2064822b, type: 3}
+      propertyPath: messages.Array.data[1]
+      value: In Hindu astrology the sign of Cancer is named Karka and its Lord is
+        Moon.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7018215713744302525, guid: 47eda0ed28f8b48408cddeaf2064822b, type: 3}
+      propertyPath: messages.Array.data[2]
+      value: In ancient Egypt, Cancer was conceived as a scarab beetle, while in
+        Mesopotamia it was represented by a turtle.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47eda0ed28f8b48408cddeaf2064822b, type: 3}
 --- !u!1001 &7734937050262109077
@@ -2075,6 +2257,24 @@ PrefabInstance:
     - target: {fileID: 7734937051512406240, guid: da4b29e1045f3294c877ac3fed91bf6c, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734937051512406240, guid: da4b29e1045f3294c877ac3fed91bf6c, type: 3}
+      propertyPath: messages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734937051512406240, guid: da4b29e1045f3294c877ac3fed91bf6c, type: 3}
+      propertyPath: messages.Array.data[0]
+      value: In the Epic of Gilgamesh, written c. 2000 BC, the hero slays the Bull
+        of Heaven.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734937051512406240, guid: da4b29e1045f3294c877ac3fed91bf6c, type: 3}
+      propertyPath: messages.Array.data[1]
+      value: 'Some say that the 17,000-year-old cave paintings in Lascaux depict
+        constellations such as Taurus, Orion''s Belt, and the Pleiades. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734937051512406240, guid: da4b29e1045f3294c877ac3fed91bf6c, type: 3}
+      propertyPath: messages.Array.data[2]
+      value: However, this view is not yet generally accepted among scientists.
       objectReference: {fileID: 0}
     - target: {fileID: 7734937051512406241, guid: da4b29e1045f3294c877ac3fed91bf6c, type: 3}
       propertyPath: m_Name
