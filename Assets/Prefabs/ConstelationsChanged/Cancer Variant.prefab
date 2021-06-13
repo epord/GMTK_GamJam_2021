@@ -12,6 +12,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8619893613057805126, guid: b09bd353354d99144960753f04204471, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619893613057805126, guid: b09bd353354d99144960753f04204471, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619893613057805126, guid: b09bd353354d99144960753f04204471, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.02
       objectReference: {fileID: 0}
@@ -53,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8619893613057805128, guid: b09bd353354d99144960753f04204471, type: 3}
       propertyPath: m_Name
-      value: Cancer
+      value: Cancer Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b09bd353354d99144960753f04204471, type: 3}
@@ -193,11 +201,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8374165452991249526, guid: fcc69c15920d194418ba8ff2adac259c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.03
+      value: -5.11
       objectReference: {fileID: 0}
     - target: {fileID: 8374165452991249526, guid: fcc69c15920d194418ba8ff2adac259c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.51
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 8374165452991249526, guid: fcc69c15920d194418ba8ff2adac259c, type: 3}
       propertyPath: m_LocalPosition.z

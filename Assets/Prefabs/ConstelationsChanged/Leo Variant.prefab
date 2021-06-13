@@ -20,6 +20,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2191817154672500133, guid: 98a5e1ed16b7f5049906465956033a45, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191817154672500133, guid: 98a5e1ed16b7f5049906465956033a45, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191817154672500133, guid: 98a5e1ed16b7f5049906465956033a45, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.395381
       objectReference: {fileID: 0}
@@ -61,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2191817154672500135, guid: 98a5e1ed16b7f5049906465956033a45, type: 3}
       propertyPath: m_Name
-      value: Leo
+      value: Leo Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98a5e1ed16b7f5049906465956033a45, type: 3}

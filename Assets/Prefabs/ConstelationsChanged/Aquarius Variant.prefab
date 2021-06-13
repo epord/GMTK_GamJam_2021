@@ -17,11 +17,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5138734677799859429, guid: fb5d0da619dbbea4c9fa84d9b5c8d3e7, type: 3}
       propertyPath: m_Name
-      value: Aquarius
+      value: Aquarius Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5138734677799859434, guid: fb5d0da619dbbea4c9fa84d9b5c8d3e7, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138734677799859434, guid: fb5d0da619dbbea4c9fa84d9b5c8d3e7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138734677799859434, guid: fb5d0da619dbbea4c9fa84d9b5c8d3e7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5138734677799859434, guid: fb5d0da619dbbea4c9fa84d9b5c8d3e7, type: 3}
       propertyPath: m_LocalPosition.x

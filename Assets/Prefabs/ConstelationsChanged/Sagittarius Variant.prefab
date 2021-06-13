@@ -7,13 +7,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1122893361168540852, guid: 1b6ef1bd9940ae744ab7e10e6ff7769c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1122893362412536106, guid: 1b6ef1bd9940ae744ab7e10e6ff7769c, type: 3}
       propertyPath: m_Name
-      value: Sagittarius
+      value: Sagittarius Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1122893362412536107, guid: 1b6ef1bd9940ae744ab7e10e6ff7769c, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122893362412536107, guid: 1b6ef1bd9940ae744ab7e10e6ff7769c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122893362412536107, guid: 1b6ef1bd9940ae744ab7e10e6ff7769c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1122893362412536107, guid: 1b6ef1bd9940ae744ab7e10e6ff7769c, type: 3}
       propertyPath: m_LocalPosition.x

@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb8aa0da03234b44af3f86ce7cf7628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
 --- !u!58 &2190342462905465503
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -208,6 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb8aa0da03234b44af3f86ce7cf7628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
 --- !u!58 &1868310211080825361
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -320,6 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb8aa0da03234b44af3f86ce7cf7628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
 --- !u!58 &5692823094583679548
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -432,6 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb8aa0da03234b44af3f86ce7cf7628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
 --- !u!58 &2737827238842433196
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -458,6 +462,14 @@ PrefabInstance:
     - target: {fileID: 5820819372935600484, guid: 6039cb33b6620c14daa0c227e90ce614, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820819372935600484, guid: 6039cb33b6620c14daa0c227e90ce614, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820819372935600484, guid: 6039cb33b6620c14daa0c227e90ce614, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5820819372935600484, guid: 6039cb33b6620c14daa0c227e90ce614, type: 3}
       propertyPath: m_LocalPosition.x
@@ -501,7 +513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5820819372935600486, guid: 6039cb33b6620c14daa0c227e90ce614, type: 3}
       propertyPath: m_Name
-      value: Taurus
+      value: Taurus Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5820819373761994645, guid: 6039cb33b6620c14daa0c227e90ce614, type: 3}
       propertyPath: m_IsActive
