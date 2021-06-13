@@ -266,8 +266,8 @@ public class ConstellationManager: MonoBehaviour
             Transform child = this.transform.GetChild(0);
             child.transform.parent = instantiatedConstellation.transform;
             LineRenderer lineRenderer = child.gameObject.GetComponent<LineRenderer>();
-            lineRenderer.startColor = Color.red;
-            lineRenderer.endColor = Color.red;
+            lineRenderer.startColor = new Color(0f, 50f, 160f);
+            lineRenderer.endColor = new Color(0f, 50f, 160f);
         }
         this.linesCreated.Clear();
 
